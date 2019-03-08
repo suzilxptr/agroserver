@@ -4,7 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "dev": "cross-env NODE_ENV=development nodemon --exec babel-node src/index.js "
+    "start": "cross-env NODE_ENV=development nodemon --exec babel-node src/index.js "
   },
   "events": {
     "restart": "killall -9 node",
