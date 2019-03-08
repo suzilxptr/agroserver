@@ -4,7 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "start": "babel-node server.js",
+    "start": "babel-node src/index.js",
     "server": "nodemon src/index.js --exec babel-node", 
     "heroku-postbuild": "npm install" 
   },
