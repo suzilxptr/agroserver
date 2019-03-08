@@ -14,10 +14,10 @@ app.get('/', (req, res) => {
 
 app.use('/api/v1/customers', CustomerRoutes);
 
-app.listen(3000, err => {
+app.listen(process.env.PORT || 3000, err => {
   if (err) {
     console.error(err);
   } else {
-    console.log(`Server listen on port 3000`);
+    console.log(`Server listen on port`, process.env.PORT);
   }
 });
