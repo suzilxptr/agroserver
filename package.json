@@ -5,8 +5,8 @@
   "license": "MIT",
   "scripts": {
     "start": "babel-node src/index.js",
-    "server": "nodemon src/index.js --exec babel-node", 
-    "heroku-postbuild": "npm install" 
+    "server": "nodemon src/index.js --exec babel-node",
+    "heroku-postbuild": "npm install"
   },
   "events": {
     "restart": "killall -9 node",
@@ -14,6 +14,7 @@
   },
   "dependencies": {
     "axios": "0.18.0",
+    "babel-cli": "^6.26.0",
     "express": "4.16.3",
     "jsonwebtoken": "8.3.0",
     "mongoose": "5.2.8",
