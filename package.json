@@ -4,7 +4,9 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "start": "NODE_ENV=development nodemon --exec babel-node src/index.js "
+    "start": "babel-node server.js",
+    "server": "nodemon src/index.js --exec babel-node", 
+    "heroku-postbuild": "npm install" 
   },
   "events": {
     "restart": "killall -9 node",
