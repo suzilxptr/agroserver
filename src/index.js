@@ -2,7 +2,7 @@ import express from 'express';
 
 import middlewaresConfig from './config/middlewares';
 import './config/db';
-import { CustomerRoutes } from './modules';
+import { CustomerRoutes, ProductRoutes } from './modules';
 
 const app = express();
 
@@ -13,11 +13,12 @@ app.get('/', (req, res) => {
 });
 
 app.use('/api/v1/customers', CustomerRoutes);
+app.use('/api/v1/products', ProductRoutes);
 
 app.listen(process.env.PORT || 3000, err => {
   if (err) {
     console.error(err);
   } else {
-    console.log(`Server listen on port`, process.env.PORT);
+    console.log(`Server listen on port`, process.env.PORT || 3000);
   }
 });
